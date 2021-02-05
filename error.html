@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Live on Torrent - live streams on webtorrents</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="nowrap">
+        <div class="item">
+            <a href="."><span class="logo"><img src="images/reddot.png" width="15px;" height="15px" />Live On
+                    Torrent</span></a>
+        </div>
+        <div class="item flex-end">
+            <div>
+                <a href="./seeder.html">
+                    <div id="btn-seeder">START TRANSMISSION NOW!</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="donations">
+            <div class="about-title"><a id="error">ERROR</a></div>
+            <div class="about-content">
+                <p>Your browser probably does not meet the requirements for transmission / reception.</p>
+                <br />
+                <p>
+                <ul class="about-content" id="msg"></ul>
+                </p>
+                <br />
+                <p>Please see more information about the requirements <a href="about.html#requisites">here</a>.</p>
+                <br />
+                <p>
+                    In case of other failures, or suggestions, please contact by email: <span class="email">contact@weboscoder.com</span>
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/webtorrent.min.js"></script>
+    <script>
+
+        function logger(msg, color) {
+            console.log("%c" + msg, "color:" + color + ";");
+        }
+
+        function addMsg(text) {
+            var ul = document.getElementById("msg");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(text));
+            ul.appendChild(li);
+        }
+
+        const WEBRTC_OK = "WEBRTC support OK";
+        const WEBRTC_FAIL = "WEBRTC support FAIL";
+        const CLIENT_OK = "WebTorrent CLIENT OK";
+        const CLIENT_FAIL = "WebTorrent CLIENT FAIL";
+        const MEDIA_DEVICES_OK = "MEDIA DEVICES support OK";
+        const MEDIA_DEVICES_FAIL = "MEDIA DEVICES support FAIL";
+
+
+        //CHECK WEBRCTC SUPPORT
+        if (WebTorrent.WEBRTC_SUPPORT) {
+            logger(WEBRTC_OK, "goldenrod");
+            addMsg(WEBRTC_OK);
+        } else {
+            logger(WEBRTC_FAIL, "red");
+            addMsg(WEBRTC_FAIL);
+        }
+        //CHECK NAVIGATOR USER MEDIA
+        if (navigator && navigator.mediaDevices.getUserMedia) {
+            logger(MEDIA_DEVICES_OK, "goldenrod");
+            addMsg(MEDIA_DEVICES_OK);
+        } else {
+            logger(MEDIA_DEVICES_FAIL, "red");
+            addMsg(MEDIA_DEVICES_FAIL);
+        }
+
+    </script>
+
+</body>
+
+</html>

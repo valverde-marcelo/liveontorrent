@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Live on Torrent - live streams on webtorrents</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <header class="nowrap">
+    <div class="item">
+      <a href="."><span class="logo"><img src="images/reddot.png" width="15px;" height="15px"/>Live On Torrent</span></a>
+    </div>
+    <div class="item flex-end">
+      <div class="x-tagged">
+        <label class="switch">
+          <input id="x-tagged" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <label for="x-tagged">Show X-Tagged Content <span>?</span></label>
+      </div>
+      <div>
+        <a href="./seeder.html">
+          <div id="btn-seeder">START TRANSMISSION NOW!</div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="leading">
+      <p class="leading-bigtext">Live!</p>
+      <p class="leading-text">Live on Torrent is a platform for sharing live streams, using the bittorrent protocol.
+        Your streams occur directly to your viewers, and are shared between viewers in real time.
+        We do not use CDNs (Content Delivery Network).
+        We do not store the content of your broadcasts.
+        We do not store your personal information.
+        We do not use cookies.
+        We do not interrupt your transmissions with ad inserts.</br>
+        And lastly, we do not perform any type of censorship on the content transmitted.</p>
+    </section>
+    <section class="categories">
+      <div class="category category-selected" id="0">All</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="14">Activism</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="16">Animals</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="4">Art</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="9">Comedy</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="13">Education</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="10">Entertainment</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="2">Films</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="18">Food</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="7">Gaming</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="12">How To</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="17">Kids</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="1">Music</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="11">News & Politics</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="8">People</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="15">Science & Technology</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="5">Sports</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="6">Travels</div>
+      <div class="vertical-line"></div>
+      <div class="category" id="3">Vehicles</div>
+      <div class="vertical-line"></div>
+    </section>
+    <section class="cards">
+      <article>
+        <img class="article-img" src="https://placekitten.com/320/220" alt=" " />
+        <div class="article-title">
+          <div class="title">Title of article</div>
+          <div class="author">Author</div>
+        </div>
+      </article>
+      <article>
+        <img class="article-img" src="https://placekitten.com/330/240" alt=" " />
+        <h1 class="article-title">
+          Title of article
+        </h1>
+      </article>
+      <article>
+        <img class="article-img" src="https://placekitten.com/280/250" alt=" " />
+        <h1 class="article-title">
+          Title of article
+        </h1>
+      </article>
+      <article>
+        <img class="article-img" src="https://placekitten.com/310/210" alt=" " />
+        <h1 class="article-title">
+          Title of article
+        </h1>
+      </article>
+      <article>
+        <img class="article-img" src="https://placekitten.com/430/240" alt=" " />
+        <h1 class="article-title">
+          Title of article
+        </h1>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <div class="item">
+      <a href="about.html#donations"><span>Donations</span></a>
+    </div>
+    <div class="item">
+      <a href="about.html#about"><span>About</span></a>
+    </div>
+    <div class="item">
+      <a href="about.html#requisites"><span>Requisites</span></a>
+    </div>
+    <div class="item">
+      <a href="about.html#contact"><span>Constact Us</span></a>
+    </div>
+    <div class="item">
+      <br/>
+      <span>Copyright © 2020 all rights reserved</span>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+
+    /**
+     * 
+     **/
+    function timestampToDate(timestamp) {
+      // Create a new JavaScript Date object based on the timestamp
+      // multiplied by 1000 so that the argument is in milliseconds, not seconds.
+      let date = new Date(timestamp * 1000);
+
+      
+
+      let year = date.getFullYear();
+      let month = "0" + (date.getMonth()+1);
+      let day = "0" + (date.getDate());
+
+      // Hours part from the timestamp
+      let hours = "0" + date.getHours();
+
+      // Minutes part from the timestamp
+      let minutes = "0" + date.getMinutes();
+      // Seconds part from the timestamp
+      let seconds = "0" + date.getSeconds();
+
+      // Will display time in 10:30:23 format
+      let formattedTime = hours.substr(-2) + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+      let formattedDate = year + '/' + month.substr(-2) + '/' + day.substr(-2);
+
+      return `${formattedTime} - ${formattedDate}`;
+    }
+    /**
+     * @param {String} HTML representing a single element
+     * @return {Element}
+     */
+    function htmlToElement(html) {
+      var template = document.createElement('template');
+      html = html.trim(); // Never return a text node of whitespace as the result
+      template.innerHTML = html;
+      return template.content.firstChild;
+    }
+
+    /**
+     * @param {String} HTML representing any number of sibling elements
+     * @return {NodeList} 
+     */
+    function htmlToElements(html) {
+      var template = document.createElement('template');
+      template.innerHTML = html;
+      return template.content.childNodes;
+    }
+
+    /**
+     * @param {Array} JSON data 
+     * 
+     */
+    function renderContent(data) {
+
+      let content = "";
+
+      let blur = !xtagged.checked;
+
+      for (const key in data) {
+
+        let token = data[key].token;
+        let title = data[key].title.trim();
+        let author = data[key].author.trim();
+        let xtagged = data[key].xtagged;
+        let thumbnail = data[key].thumbnail;
+        let timestamp = data[key].timestamp;
+
+        let date = timestampToDate(timestamp);
+
+        let real_image = "images/real.jpg";
+        let blur_image = "images/blur.jpg";
+
+
+        if (blur && xtagged === 1) {
+          src = blur_image;
+        } else {
+          if (thumbnail && thumbnail.length > 0) {
+            src = thumbnail;
+          } else {
+            src = real_image;
+          }
+        }
+
+        //<img class="article-img" src="${src}" alt=" " />
+        //<div class="article-image-div" style="background-image: url(${src})"></div>
+
+        let article = `<article>
+                        <a class="container" href="./peer.php?${token}">
+                          <img class="article-img" src="${src}" alt=" " />
+                          <div class="article-title">
+                            <div class="title">${title}</div>
+                            <div class="author">@${author} - ${date}</div>
+                          </div>
+                        </a>
+                      </article>`;
+
+        content = content + article;
+      }
+
+      $cards.innerHTML = content;
+    }
+
+    /**
+     * @param {Number} ID category
+     * 
+     */
+    function getContent(category) {
+
+      let xml = new XMLHttpRequest();
+      let url = "./server/xhr/catalog.php";
+      xml.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          let response = JSON.parse(this.responseText);
+          if (response) {
+            renderContent(response);
+          }
+        }
+      };
+
+      let json = { "category": category };
+
+      xml.open("POST", url, false);
+      //xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xml.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      xml.send(JSON.stringify(json));
+    }
+
+    function getCategories() {
+      let xml = new XMLHttpRequest();
+      let url = "http://localhost/mediarecorder/server/xhr/categories.php";
+      xml.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          let data = JSON.parse(this.responseText);
+          for (let i in data) {
+            let category = data[i];
+            console.log(`<div class="category" id="${category.id}">${category.description}</div>`)
+            console.log(`<div class="vertical-line"></div>`);
+          }
+        }
+      };
+
+      xml.open("POST", url, false);
+      xml.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      xml.send();
+    }
+
+    /**
+     * HTML ELEMENTS
+     */
+    var $cards = document.querySelector('.cards');
+    var $categories = document.getElementsByClassName('category');
+    var xtagged = document.getElementById("x-tagged");
+
+    /**
+     * Handle categories menu and load content
+     */
+    for (var key in $categories) {
+      //Add event listener for each category
+      $categories[key].onclick = e => {
+        //unselect others
+        document.querySelector('.category-selected').classList.toggle('category-selected');
+        //select clicked
+        e.target.classList.toggle('category-selected');
+
+        getContent(e.target.id);
+      }
+    }
+
+    xtagged.onclick = () => {
+      let selected = document.getElementsByClassName('category-selected')[0].id;
+      getContent(selected);
+    }
+
+    /**
+     * Get initial content
+     */
+    getContent(0);
+
+  </script>
+</body>
+
+</html>

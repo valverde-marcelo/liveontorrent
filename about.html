@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Live on Torrent - live streams on webtorrents</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <header class="nowrap">
+    <div class="item">
+      <a href="."><span class="logo"><img src="images/reddot.png" width="15px;" height="15px"/>Live On Torrent</span></a>
+    </div>
+    <div class="item flex-end">
+      <div>
+        <a href="./seeder.html">
+          <div id="btn-seeder">START TRANSMISSION NOW!</div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="donations">
+      <div class="about-title"><a id="donations">Donations</a></div>
+      <div class="about-content">
+        
+          <p>The use of the platform is free. </p>
+          <p>We do not require payment to transmit, nor to view.
+            We do not store personal data, we do not use any information for commercial purposes.</p>
+          <p>Donations are welcome so that the platform remains free and without commercial advertisements.</p>
+          <br />
+          <p>Use the button on the side to donate directly through PayPal, or if you prefer, scan the QR Code.</p>
+        
+          <br/>
+
+        
+          <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="hidden" name="hosted_button_id" value="9EPBH8XH5CL9S" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+              name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          </form>
+          <br />
+          <img alt="QR Code" class="qrcode" src="images/qrcode.png" />
+        
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-title"><a id="about">About Live on Torrent</a></div>
+      <div class="about-content">
+        <p>Live on Torrent is a platform for sharing live streams, using the bittorrent protocol.</p>
+        <p>Your streams occur directly to your viewers, and are shared between viewers in real time.</p>
+        <p>We do not use CDNs (Content Delivery Network).</p>
+        <p>We do not store the content of your broadcasts.</p>
+        <p>We do not store your personal information.</p>
+        <p>We do not use cookies.</p>
+        <p>We do not interrupt your transmissions with ad inserts.</p>
+        <p>And lastly, we do not perform any type of censorship on the content transmitted.</p>
+        <br />
+        <p>Our platform is in a beta stage of development, and may fail during transmission.</p>
+        <p>Keep in mind that due to the adopted P2P model, a better experience will be obtained when reaching a larger
+          number of viewers.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-title"><a id="contact">Contatct Us</a></div>
+      <div class="about-content">
+        <p>Questions? Suggestions? Report a bug?</p>
+        <p>Please contact by email: <span class="email">contact@weboscoder.com</span></p>
+      </div>
+    </section>
+
+    <section class="requisites">
+      <div class="about-title"><a id="requisites">Requisites</a></div>
+      <div class="about-content">
+        <p>The platform uses an implementation of the Bittorrent protocol for browsers, called WebTorrent.</p>
+        <p>WebTorrent is free software, licensed under the MIT License, and can be obtained <a href="https://webtorrent.io/">here</a>.</p>
+        <p>To start a transmission, the browser must support WebRTC.</p>
+        <p>For more information, read the following references:</p>
+        <ul>
+          <li><a href="https://caniuse.com/?search=webrtc">https://caniuse.com/?search=webrtc</a></li>
+          <li><a href="https://developer.mozilla.org/docs/Web/API/WebRTC_API">https://developer.mozilla.org/docs/Web/API/WebRTC_API</a></li>
+        </ul>
+        <p>Viewers (peers) must support WebRTC and Media Source.</p>
+        <p>For more information about Media Source, read the following references:</p>
+        <ul>
+          <li><a href="https://caniuse.com/?search=mediasource">https://caniuse.com/?search=mediasource</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource">https://developer.mozilla.org/en-US/docs/Web/API/MediaSource</a></li>
+        </ul>
+
+
+      </div>
+    </section>
+
+
+  </main>
+  <footer>
+    <div class="item">
+      <a href="about.html#donations"><span>Donations</span></a>
+    </div>
+    <div class="item">
+      <a href="about.html#about"><span>About</span></a>
+    </div>
+    <div class="item">
+      <a href="about.html#requisites"><span>Requisites</span></a>
+    </div>
+    <div class="item">
+      <a href="about.html#contact"><span>Constact Us</span></a>
+    </div>
+    <div class="item">
+      <br />
+      <span>Copyright © 2020 all rights reserved</span>
+    </div>
+  </footer>
+</body>
+
+</html>

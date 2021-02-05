@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Live on Torrent - live streams on webtorrents</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="nowrap">
+        <div class="item">
+          <a href="."><span class="logo"><img src="images/reddot.png" width="15px;" height="15px"/>Live On Torrent</span></a>
+        </div>
+        <div class="item flex-end">
+          <div>
+              <div id="btn-seeder">START TRANSMISSION NOW!</div>
+          </div>
+        </div>
+      </header>
+    <main>
+        <div class="wrapper">
+            <div class="item">
+                <section class="broadcast-player">
+                    <video class="video" playsinline autoplay muted controls></video>
+                    <div class="broadcast-line-sources line-bottom">
+                        <div class="sources">
+                            <div class="broadcast-source">
+                                <label for="videoSource">Video source: </label>
+                                <select id="videoSource"></select>
+                            </div>
+                            <div class="broadcast-source">
+                                <label for="audioSource">Audio source: </label>
+                                <select id="audioSource">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="broadcast-buttons item">
+                            <button id="recordbutton">START</button>
+                            <button id="stopbutton" disabled>STOP</button>
+                            <button id="sharebutton">SHARE</button>
+                        </div>
+                    </div>
+                    <div class="broadcast-line-category-xtag line-bottom">
+                        <div>
+                            <label for="category">Category: </label>
+                            <select id="category" required>
+                                <option value="">Select one category</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div class="broadcast-line-xtag">
+                                <label class="switch">
+                                    <input id="x-tagged" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <label for="x-tagged">X-Tagged Content</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="broadcast-line-description">
+                        <div class="broadcast-line item">
+                            <label for="author">Author (optional): </label>
+                            <input id='author' maxlength="255" />
+                        </div>
+                    </div>
+                    <div class="broadcast-line-description">
+                        <div class="broadcast-line item">
+                            <label for="title">Title: </label>
+                            <input id='title' required minlength="10" maxlength="255" />
+                        </div>
+                    </div>
+                    <div class="broadcast-line-description">
+                        <div class="broadcast-line item">
+                            <label for="description">Description: </label>
+                            <textarea id='description' rows="5" cols="33" minlength="10"
+                                maxlength="4000"></textarea>
+                        </div>
+                    </div>
+                    <div class="broadcast-line-keywords">
+                        <div class="broadcast-line item">
+                            <label for="keywords">Keywords: </label>
+                            <textarea id='keywords' rows="5" cols="33" minlength="10"
+                                maxlength="255"></textarea>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+            <div class="item">
+                <section class="right">
+                    <div class="donate-button">
+                        <form action="https://www.paypal.com/donate" method="post" target="_top">
+                            <input type="hidden" name="hosted_button_id" value="9EPBH8XH5CL9S" />
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+                              name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                          </form>                      
+                    </div>
+                    <div class="donate-qrcode">
+                        <img alt="QR Code" class="qrcode" src="images/qrcode.png" />
+                    </div>
+
+                    <section class="broadcast-description">
+                        <div>--- Broadcast status ---</div>
+                        <div>UL: <span id="speed_upload"></span></div>
+                        <div>Total UL: <span id="total_uploaded"></span></div>
+                        <div>Max Viewers:<span id="viewers"></span></div>
+                    </section>
+                </section>
+
+                
+                
+                
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="item">
+          <a href="about.html#donations"><span>Donations</span></a>
+        </div>
+        <div class="item">
+          <a href="about.html#about"><span>About</span></a>
+        </div>
+        <div class="item">
+          <a href="about.html#requisites"><span>Requisites</span></a>
+        </div>
+        <div class="item">
+            <a href="about.html#contact"><span>Constact Us</span></a>
+          </div>
+        <div class="item">
+          <br />
+          <span>Copyright © 2020 all rights reserved</span>
+        </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/seed.js"></script>
+</body>
+
+</html>
